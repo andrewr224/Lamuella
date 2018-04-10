@@ -1,1 +1,4 @@
-console.log('Initial setup complete.');
+import renderer from './renderer';
+import menu     from './menu';
+
+renderer.addMenu(menu);
