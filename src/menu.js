@@ -45,7 +45,28 @@ const menu = (() => {
     return box;
   };
 
+  let clearContainer = () => {
+    container.textContent = '';
+  };
+
+  let clearTab = () => {
+    document.querySelector('.active').classList.toggle('active');
+  };
+
+  let highlightTab = () => {
+    document.querySelector('#menu').classList.add('active');
+  };
+
+
+  let prepare = () => {
+    clearContainer();
+    clearTab();
+    highlightTab();
+  };
+
   let render = () => {
+    prepare();
+
     let menuContainer = document.createElement('div');
     menuContainer.classList.add('menu');
 

@@ -5,7 +5,27 @@ const about = (() => {
     container.appendChild(content);
   };
 
+  let clearContainer = () => {
+    container.textContent = '';
+  };
+
+  let clearTab = () => {
+    document.querySelector('.active').classList.toggle('active');
+  };
+
+  let highlightTab = () => {
+    document.querySelector('#about').classList.add('active');
+  };
+
+  let prepare = () => {
+    clearContainer();
+    clearTab();
+    highlightTab();
+  };
+
   let render = () => {
+    prepare();
+
     let content = document.createElement('div');
     content.classList.add('about');
 

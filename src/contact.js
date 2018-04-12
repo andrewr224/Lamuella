@@ -5,7 +5,27 @@ const contact = (() => {
     container.appendChild(content);
   };
 
+  let clearContainer = () => {
+    container.textContent = '';
+  };
+
+  let clearTab = () => {
+    document.querySelector('.active').classList.toggle('active');
+  };
+
+  let highlightTab = () => {
+    document.querySelector('#contact').classList.add('active');
+  };
+
+  let prepare = () => {
+    clearContainer();
+    clearTab();
+    highlightTab();
+  };
+
   let render = () => {
+    prepare();
+
     let content = document.createElement('div');
     content.classList.add('contact');
 
