@@ -1,8 +1,7 @@
-import renderer from './renderer';
-import menu     from './menu';
+import menu    from './menu';
+import about   from './about';
+import contact from './contact';
 
-// renderer.addMenu(menu);
-
-import about from './about';
-
-about.render();
+menu.render();
+// about.render();
+// contact.render();
