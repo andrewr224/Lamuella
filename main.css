@@ -6,29 +6,117 @@
 
 body{
     font-size: 10px;
+    font-family: Arial, sans-serif;
     background: url(assets/cover.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
 
-header{
-    background-color: rgba(255, 140, 0, .3);
-    text-align: center;
-    color: white;
+h3{
     font-size: 2rem;
-	  letter-spacing: .1rem;
-    padding-top: 2rem;
-    padding-bottom: 4rem;
-    margin-bottom: 2rem;
+    text-align: center;
     font-family: 'Georgia', serif;
 }
 
-h3{
-    color: white;
-    font-size: 2rem;
-    text-align: center;
+a{
+    text-decoration: none;
 }
 
+header{
+    background-color: rgba(255, 140, 0, .3);
+    font-size: 2rem;
+	  letter-spacing: .1rem;
+    padding-top: 2rem;
+    padding-left: 1rem;
+    font-family: 'Georgia', serif;
+}
+
+header h1,
+nav{
+    display: inline-block;
+}
+
+header h1 a{
+    color: white;
+}
+
+nav {
+    margin-left: 2rem;
+}
+
+nav a{
+    display: inline-block;
+    color: gold;
+    padding: 0 1rem;
+}
+
+nav a:hover{
+    border-bottom: .4rem solid gold;
+}
+
+nav a.active{
+    border-bottom: .4rem solid gold;
+}
+
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+h3{
+    display: block;
+    margin-bottom: 2rem;
+    width: 100%;
+}
+
+/* === ABOUT === */
+.about{
+    background-color: white;
+    padding: 5rem 20%;
+    font-size: 1.2rem;
+    box-shadow: 0 0 5px gray;
+}
+
+.about p{
+    display: inline-block;
+}
+
+blockquote {
+    background: #f9f9f9;
+    border-left: 10px solid #ccc;
+    margin: 1.5em 10px;
+    padding: 0.5em 10px;
+    quotes: "\201C""\201D""\2018""\2019";
+}
+
+blockquote:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+}
+
+.author{
+    font-size: 1rem;
+    display: block;
+    text-align: right;
+    font-style: italic;
+    margin-bottom: 2rem;
+}
+
+.about img{
+    margin: 2rem 0 1rem 0;
+}
+
+figcaption{
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* === MENU === */
 .menu{
     display: flex;
     flex-wrap: wrap;
@@ -40,7 +128,6 @@ h3{
 .item{
     background-color: white;
     font-size: 1.1rem;
-    font-family: 'Georgia', serif;
     margin: .5rem;
     padding: .7rem;
     position: relative;
@@ -51,6 +138,15 @@ h3{
 footer{
     text-align: center;
     font-size: .8rem;
-    background-color: rgba(189, 183, 107, .5);
+    background-color: #2F4F4F;
+    /* background-color: rgba(189, 183, 107, .5); */
     padding: 2rem 0;
+}
+
+footer a{
+    color: black;
+}
+
+footer a:hover{
+    color: white;
 }
